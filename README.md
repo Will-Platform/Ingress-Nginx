@@ -19,12 +19,17 @@ helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 ```
 
+## Pull Helm ingress-nginx source code
+```console
+helm pull ingress-nginx/ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --untar
+```
+
 ## Install Chart
 
 **Important:** only helm3 is supported
 
 ```console
-helm install [RELEASE_NAME] ingress-nginx/ingress-nginx
+helm install [RELEASE_NAME] ./ -n ingress-nginx --create-namespace
 ```
 
 The command deploys ingress-nginx on the Kubernetes cluster in the default configuration.
