@@ -561,7 +561,7 @@ controller:
     appProtocol: true
     nodePorts:
       # -- Node port allocated for the external HTTP listener. If left empty, the service controller allocates one from the configured node port range.
-      http: ""
+      http: "30001"
       # -- Node port allocated for the external HTTPS listener. If left empty, the service controller allocates one from the configured node port range.
       https: ""
       # -- Node port mapping for external TCP listeners. If left empty, the service controller allocates them from the configured node port range.
@@ -745,7 +745,7 @@ controller:
     ## Additional annotations to the admission webhooks.
     ## These annotations will be added to the ValidatingWebhookConfiguration and
     ## the Jobs Spec of the admission webhooks.
-    enabled: true
+    enabled: false
     # -- Additional environment variables to set
     extraEnvs: []
     # extraEnvs:
